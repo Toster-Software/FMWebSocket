@@ -6,7 +6,7 @@ const WS_MODULE = require("ws");
 
 const app = express();
 app.use(express.static(__dirname + '/public'));
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.get("/hello", (req, res) => { res.send("hello world"); });
 
